@@ -7,6 +7,8 @@
 #include <cstdio>
 #include <ctime>
 #include <unistd.h>
+#include <random>
+
 
 class Zombie {
 public:
@@ -20,7 +22,9 @@ public:
 	void				setName(std::string name);
 	void				setType(std::string type);
 	void				announce(void);
-	std::string	randomName(const int len);
+	static std::string 	randomName(int len);
+
+
 
 private:
 

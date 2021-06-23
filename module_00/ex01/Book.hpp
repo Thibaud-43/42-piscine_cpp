@@ -15,8 +15,8 @@ public:
 	~Book(void);
 	void		addContact(void);
 	static int	getNbcontact(void);
+	void		searchContact(void);
 
-	std::string	firstName;
 
 private:
 	static int	_nbContact;

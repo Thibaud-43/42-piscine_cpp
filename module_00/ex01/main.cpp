@@ -22,7 +22,10 @@ int     main(int argc, char **argv)
 			stop = true;
 		}
 		else if (command == "SEARCH")
+		{
 			std::cout << "Vous avez tappé : " + command <<std::endl << std::endl;
+			phoneBook.searchContact();
+		}
 		else
 			std::cout << "COMMANDE INEXISTANTE"<<std::endl << std::endl;
 	}

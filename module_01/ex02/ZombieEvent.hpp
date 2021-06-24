@@ -5,8 +5,6 @@
 
 class ZombieEvent {
 	public:
-
-		std::string	type;
 		ZombieEvent(void);
 		~ZombieEvent(void);
 		Zombie				*randomChump(void);
@@ -14,6 +12,7 @@ class ZombieEvent {
 		void				setZombieType(std::string type);
 
 	private:
+		std::string	_type;
 };
 
 #endif 

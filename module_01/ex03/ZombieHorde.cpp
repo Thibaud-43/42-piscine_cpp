@@ -1,27 +1,27 @@
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(int n): size(n)
+ZombieHorde::ZombieHorde(int n): _size(n)
 {
-    this->horde = new Zombie[this->size];
-    for (int i = 0; i < this->size ; i++)
+    _horde = new Zombie[_size];
+    for (int i = 0; i < _size ; i++)
     {
-        this->horde[i].setName(Zombie::randomName(10));
-        this->horde[i].setType("Chemical");
+        _horde[i].setName(Zombie::randomName(10));
+        _horde[i].setType("Chemical");
     }
 }
 
 ZombieHorde::~ZombieHorde(void)
 {
-	this->kill();
+	kill();
 }
 
 void    ZombieHorde::kill(void)
 {
-	delete [] this->horde;
+	delete [] _horde;
 }
 
 void    ZombieHorde::announce(void)
 {
-	for (int i = 0; i < this->size ; i++)
-        this->horde[i].announce();
+	for (int i = 0; i < _size ; i++)
+        _horde[i].announce();
 }

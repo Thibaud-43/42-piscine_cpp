@@ -13,7 +13,7 @@ public:
 
 private:
 	std::string _name;
-	Weapon  &weapon;
+	Weapon  &_weapon;
 };
 
 #endif 

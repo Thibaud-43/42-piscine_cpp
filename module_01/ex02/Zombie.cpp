@@ -11,45 +11,39 @@ Zombie::~Zombie(void)
 
 void    Zombie::announce(void)
 {
-	std::cout<< "<" << this->name << " (" << this->type << ")> Braiiiiiiinnnssss ..." << std::endl;
+	std::cout<< "<" << _name << " (" << _type << ")> Braiiiiiiinnnssss ..." << std::endl;
 }
 
 std::string	Zombie::getName(void)
 {
-	return (this->name);
+	return (_name);
 }
 
 std::string	Zombie::getType(void)
 {
-	return (this->type);
+	return (_type);
 }
 
 void	Zombie::setName(std::string name)
 {
-	this->name = name;
+	_name = name;
 	return ;
 }
 
 void	Zombie::setType(std::string type)
 {
-	this->type = type;
+	_type = type;
 	return ;
 }
 
-std::string  Zombie::randomName(const int len)
+std::string Zombie::randomName(int len)
 {
-	std::string tmp_s;
-	static const char alphanum[] =
-		"0123456789"
-		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-		"abcdefghijklmnopqrstuvwxyz";
-
-	srand( (unsigned) time(NULL) * getpid());
-
-	tmp_s.reserve(len);
-
-	for (int i = 0; i < len; ++i) 
-		tmp_s += alphanum[rand() % (sizeof(alphanum) - 1)];
-
-	return tmp_s;
+   std::string str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+   std::string newstr;
+   int pos;
+   while(newstr.size() != len) {
+    pos = ((rand() % (str.size() - 1)));
+    newstr += str.substr(pos,1);
+   }
+   return newstr;
 }

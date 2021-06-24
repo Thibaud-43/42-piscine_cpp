@@ -11,81 +11,81 @@ Contact::~Contact(void)
 
 void	Contact::display(void)
 {
-	std::cout << "|" << std::setw(10) << this->index;
-	if (this->firstName.length() > 10)
-		std::cout << "|" << this->firstName.substr(0, 9) << ".";
+	std::cout << "|" << std::setw(10) << _index;
+	if (_firstName.length() > 10)
+		std::cout << "|" << _firstName.substr(0, 9) << ".";
 	else
-		std::cout << "|" << std::setw(10) << this->firstName;
-	if (this->lastName.length() > 10)
-		std::cout << "|" << this->lastName.substr(0, 9) << ".";
+		std::cout << "|" << std::setw(10) << _firstName;
+	if (_lastName.length() > 10)
+		std::cout << "|" << _lastName.substr(0, 9) << ".";
 	else
-		std::cout << "|" << std::setw(10) << this->lastName;
-	if (this->nickname.length() > 10)
-		std::cout << "|" << this->nickname.substr(0, 9) << ".";
+		std::cout << "|" << std::setw(10) << _lastName;
+	if (_nickname.length() > 10)
+		std::cout << "|" << _nickname.substr(0, 9) << ".";
 	else
-		std::cout << "|" << std::setw(10) << this->nickname;
+		std::cout << "|" << std::setw(10) << _nickname;
 	std::cout << "|" << std::endl;
 }
 void	Contact::displayDetails(void)
 {
-	std::cout << std::endl << "FIRST NAME : " << this->firstName << std::endl;
+	std::cout << std::endl << "FIRST NAME : " << _firstName << std::endl;
 
-	std::cout << "LAST NAME : " << this->lastName << std::endl;
+	std::cout << "LAST NAME : " << _lastName << std::endl;
 
-	std::cout << "NNICKNAME : " << this->nickname << std::endl;
+	std::cout << "NNICKNAME : " << _nickname << std::endl;
 
-	std::cout << "LOGIN : " << this->login << std::endl;
+	std::cout << "LOGIN : " << _login << std::endl;
 
-	std::cout << "POSTAL ADDRESS : " << this->postalAddress << std::endl;
+	std::cout << "POSTAL ADDRESS : " << _postalAddress << std::endl;
 
-	std::cout << "EMAIL ADDRESS : " << this->emailAddress << std::endl;
+	std::cout << "EMAIL ADDRESS : " << _emailAddress << std::endl;
 
-	std::cout << "PHONE NUMBER : " << this->phoneNumber << std::endl;
+	std::cout << "PHONE NUMBER : " << _phoneNumber << std::endl;
 
-	std::cout << "BIRTHDAY DATE : " << this->birthdayDate << std::endl;
+	std::cout << "BIRTHDAY DATE : " << _birthdayDate << std::endl;
 
-	std::cout << "FAVORITE MEAL : " << this->favoriteMeal << std::endl;
+	std::cout << "FAVORITE MEAL : " << _favoriteMeal << std::endl;
 
-	std::cout << "UNDERWEAR COLOR : " << this->underwearColor << std::endl;
+	std::cout << "UNDERWEAR COLOR : " << _underwearColor << std::endl;
 
-	std::cout << "DARKEST SECRET : " << this->darkestSecret << std::endl << std::endl;
+	std::cout << "DARKEST SECRET : " << _darkestSecret << std::endl << std::endl;
 }
 
 
 void	Contact::init(int index)
 {
-	this->index = index;
-	std::cout << "Please fill the following informations carefully : ";
-	std::cout << std::endl << "FIRST NAME : >" ;
-	std::cin >>	this->firstName;
+	_index = index;
+	std::cout << "Please fill the following informations carefully : " << std::endl;
+	std::cout  << "FIRST NAME : >" ;
+	std::getline(std::cin, _firstName);
 
 	std::cout << "LAST NAME : >" ;
-	std::cin >>	this->lastName;
+	std::getline(std::cin, _lastName);
 
 	std::cout << "NNICKNAME : >" ;
-	std::cin >>	this->nickname;
+	std::getline(std::cin, _nickname);
 
 	std::cout << "LOGIN : >" ;
-	std::cin >>	this->login;
+	std::getline(std::cin, _login);
 
 	std::cout << "POSTAL ADDRESS : >" ;
-	std::cin >>	this->postalAddress;
+	std::getline(std::cin, _postalAddress);
 
 	std::cout << "EMAIL ADDRESS : >" ;
-	std::cin >>	this->emailAddress;
+	std::getline(std::cin, _emailAddress);
 
 	std::cout << "PHONE NUMBER : >" ;
-	std::cin >>	this->phoneNumber;
+	std::getline(std::cin, _phoneNumber);
 
 	std::cout << "BIRTHDAY DATE : >" ;
-	std::cin >>	this->birthdayDate;
+	std::getline(std::cin, _birthdayDate);
 
 	std::cout << "FAVORITE MEAL : >" ;
-	std::cin >>	this->favoriteMeal;
+	std::getline(std::cin, _favoriteMeal);
 
 	std::cout << "UNDERWEAR COLOR : >" ;
-	std::cin >>	this->underwearColor;
+	std::getline(std::cin, _underwearColor);
 
 	std::cout << "DARKEST SECRET : >" ;
-	std::cin >>	this->darkestSecret;
+	std::getline(std::cin, _darkestSecret);
 }

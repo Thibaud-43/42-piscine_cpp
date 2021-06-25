@@ -1,4 +1,4 @@
-SRCS			=  main.cpp
+SRCS			=  main.cpp Sed.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++

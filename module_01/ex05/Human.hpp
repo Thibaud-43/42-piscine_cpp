@@ -10,7 +10,7 @@ public:
 	const Brain	&getBrain(void) const;
 	std::string identify(void) const;
 private:
-	const Brain	_brain;
+	const Brain	m_brain;
 };
 
 #endif 

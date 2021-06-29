@@ -11,28 +11,28 @@ Zombie::~Zombie(void)
 
 void    Zombie::announce(void)
 {
-	std::cout<< "<" << _name << " (" << _type << ")> Braiiiiiiinnnssss ..." << std::endl;
+	std::cout<< "<" << m_name << " (" << m_type << ")> Braiiiiiiinnnssss ..." << std::endl;
 }
 
-std::string	Zombie::getName(void)
+std::string	Zombie::getName(void) const
 {
-	return (_name);
+	return (m_name);
 }
 
-std::string	Zombie::getType(void)
+std::string	Zombie::getType(void) const
 {
-	return (_type);
+	return (m_type);
 }
 
 void	Zombie::setName(std::string name)
 {
-	_name = name;
+	m_name = name;
 	return ;
 }
 
 void	Zombie::setType(std::string type)
 {
-	_type = type;
+	m_type = type;
 	return ;
 }
 

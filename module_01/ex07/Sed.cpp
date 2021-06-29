@@ -1,8 +1,9 @@
 #include "Sed.hpp"
 
-Sed::Sed(std::string fileName, std::string strOld, std::string strNew): _fileName(fileName), _strOld(strOld), _strNew(strNew)
+Sed::Sed(std::string fileName, std::string strOld, std::string strNew):
+m_fileName(fileName), m_strOld(strOld), m_strNew(strNew)
 {
-    _fileNameReplace = _fileName + ".replace";
+    m_fileNameReplace = m_fileName + ".replace";
 }
 
 Sed::~Sed()
@@ -13,16 +14,16 @@ Sed::~Sed()
 void    Sed::fileToBuffer(void)
 {
     string  line;
-    _myFileReading.open(_fileName);
-    if (_myFileReading.is_open())
+    m_myFileReading.open(m_fileName);
+    if (m_myFileReading.is_open())
     {    
-        while (getline (_myFileReading, line))
+        while (getline (m_myFileReading, line))
         {   
-             _content += line;
-            if (!_myFileReading.eof())
-			    _content += "\n";
+             m_content += line;
+            if (!m_myFileReading.eof())
+			    m_content += "\n";
         }
-        _myFileReading.close();
+        m_myFileReading.close();
     }
     else
         cout << "Error with file" << endl;
@@ -31,11 +32,11 @@ void    Sed::fileToBuffer(void)
 void    Sed::bufferToFile(void)
 {
     string  line;
-    _myFileWriting.open(_fileNameReplace);
-    if (_myFileWriting.is_open())
+    m_myFileWriting.open(m_fileNameReplace);
+    if (m_myFileWriting.is_open())
     {    
-        _myFileWriting << _content;
-        _myFileWriting.close();
+        m_myFileWriting << m_content;
+        m_myFileWriting.close();
     }
     else
         cout << "Error with file" << endl;
@@ -54,9 +55,9 @@ string Sed::ReplaceAll(std::string str, const std::string& from, const std::stri
 
 void    Sed::searchAndReplace(void)
 {
-    if (_strNew.length() == 0 || _strOld.length() == 0 || _fileName.length() == 0)
+    if (m_strNew.length() == 0 || m_strOld.length() == 0 || m_fileName.length() == 0)
         cout << "One argument is empty" << endl;
     fileToBuffer();
-    _content = ReplaceAll(_content, _strOld, _strNew);
+    m_content = ReplaceAll(m_content, m_strOld, m_strNew);
     bufferToFile();
 }

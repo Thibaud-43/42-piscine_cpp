@@ -10,13 +10,13 @@ using namespace std;
 class Sed
 {
     private:
-        string      _fileName;
-        string      _fileNameReplace;
-        string      _strOld;
-        string      _strNew;
-        string      _content;
-        ifstream    _myFileReading;
-        ofstream    _myFileWriting;
+        string      m_fileName;
+        string      m_fileNameReplace;
+        string      m_strOld;
+        string      m_strNew;
+        string      m_content;
+        ifstream    m_myFileReading;
+        ofstream    m_myFileWriting;
         void        fileToBuffer(void);
         void        bufferToFile(void);
         string      ReplaceAll(string str, const string& from, const string& to);

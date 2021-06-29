@@ -14,15 +14,15 @@ class Zombie {
 public:
 	Zombie(void);
 	~Zombie(void);
-	std::string			getType(void);
-	std::string			getName(void);
+	std::string			getType(void) const;
+	std::string			getName(void) const;
 	void				setName(std::string name);
 	void				setType(std::string type);
 	void				announce(void);
 	static std::string 	randomName(int len);
 private:
-	std::string     	_name;
-	std::string     	_type;
+	std::string     	m_name;
+	std::string     	m_type;
 };
 
 #endif 

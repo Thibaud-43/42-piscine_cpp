@@ -12,7 +12,7 @@ class ZombieEvent {
 		void				setZombieType(std::string type);
 
 	private:
-		std::string	_type;
+		std::string	m_type;
 };
 
 #endif 

@@ -11,8 +11,8 @@ class ZombieHorde {
 		void    kill(void);
 
 	private:
-		Zombie	*_horde;
-		int		_size;
+		Zombie	*m_horde;
+		int		m_size;
 };
 
 #endif 

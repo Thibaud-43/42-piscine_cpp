@@ -12,8 +12,8 @@ public:
 	void	setWeapon(Weapon &weapon);
 	void	attack(void);
 private:
-    std::string _name;
-    Weapon	*_weapon;
+    std::string m_name;
+    Weapon	*m_weapon;
 };
 
 #endif 

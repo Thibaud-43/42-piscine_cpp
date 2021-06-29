@@ -16,7 +16,7 @@ void	Book::addContact(void)
 		std::cout<< "The book is full" << std::endl;
 	else
 	{
-		(_contact[_nbContact]).init(_nbContact);
+		(m_contact[_nbContact]).init(_nbContact);
 		_nbContact += 1;
 	}
 }
@@ -33,7 +33,7 @@ void	Book::searchContact(void)
 	for (int i = 0 ; i < 8 ; i++)
 	{
 		if (i < _nbContact)
-			_contact[i].display();
+			m_contact[i].display();
 	}
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "Which contact do you want to display ? (ID)" << std::endl;
@@ -42,14 +42,14 @@ void	Book::searchContact(void)
 	ss >> indexInt;
 	indexInt = stoi(indexStr);
 	if (indexInt >=0 && indexInt < _nbContact)
-		_contact[indexInt].displayDetails();
+		m_contact[indexInt].displayDetails();
 	else
 		std::cout << "Sorry, this index doesn't exist." << std::endl;
 }
 
 int	Book::getNbcontact(void)
 {
-	return Book::_nbContact;
+	return _nbContact;
 }
 
 int	Book::_nbContact = 0;

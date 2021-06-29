@@ -1,12 +1,12 @@
 #include "ZombieHorde.hpp"
 
-ZombieHorde::ZombieHorde(int n): _size(n)
+ZombieHorde::ZombieHorde(int n): m_size(n)
 {
-    _horde = new Zombie[_size];
-    for (int i = 0; i < _size ; i++)
+    m_horde = new Zombie[m_size];
+    for (int i = 0; i < m_size ; i++)
     {
-        _horde[i].setName(Zombie::randomName(10));
-        _horde[i].setType("Chemical");
+        m_horde[i].setName(Zombie::randomName(10));
+        m_horde[i].setType("Chemical");
     }
 }
 
@@ -17,11 +17,11 @@ ZombieHorde::~ZombieHorde(void)
 
 void    ZombieHorde::kill(void)
 {
-	delete [] _horde;
+	delete [] m_horde;
 }
 
 void    ZombieHorde::announce(void)
 {
-	for (int i = 0; i < _size ; i++)
-        _horde[i].announce();
+	for (int i = 0; i < m_size ; i++)
+        m_horde[i].announce();
 }

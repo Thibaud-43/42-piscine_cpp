@@ -11,9 +11,10 @@ int     main(int argc, char **argv)
 	else
 	{
 		for (int k = 1 ; k < argc ; k++)
-            s += std::string(argv[k]) + std::string(" ");
-		transform(s.begin(), s.end(), s.begin(), ::toupper);
-    	std::cout << s.substr(0, s.length() - 1) << std::endl;
+            s += std::string(argv[k]);
+		for (int k = 0 ; k < s.length() ; k++)
+            s[k] = toupper(s[k]);
+    	std::cout << s << std::endl;
 	}
     return (0);
 }

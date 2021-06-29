@@ -1,4 +1,4 @@
-SRCS			= main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS			= tests.cpp Account.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++

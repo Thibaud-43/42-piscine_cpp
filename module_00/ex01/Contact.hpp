@@ -15,18 +15,12 @@ class Contact {
 		void		displayDetails(void);
 		void		init(int);
 	private:
-		int			_index;
-		std::string	_firstName;
-		std::string	_lastName;
-		std::string	_nickname;
-		std::string	_login;
-		std::string _postalAddress;
-		std::string	_emailAddress;
-		std::string	_phoneNumber;
-		std::string	_birthdayDate;
-		std::string	_favoriteMeal;
-		std::string	_underwearColor;
-		std::string	_darkestSecret;
+		int			m_index;
+		std::string	m_firstName;
+		std::string	m_lastName;
+		std::string	m_nickname;
+		std::string	m_phoneNumber;
+		std::string	m_darkestSecret;
 };
 
 #endif 

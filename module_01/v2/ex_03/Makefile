@@ -1,4 +1,4 @@
-SRCS			= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS			= Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++

@@ -12,13 +12,8 @@ Book::~Book(void)
 
 void	Book::addContact(void)
 {
-	if (_nbContact == 8)
-		std::cout<< "The book is full" << std::endl;
-	else
-	{
-		(m_contact[_nbContact]).init(_nbContact);
-		_nbContact += 1;
-	}
+	(m_contact[(_nbContact % 8)]).init(_nbContact % 8);
+	_nbContact += 1;
 }
 
 void	Book::searchContact(void)

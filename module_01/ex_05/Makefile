@@ -1,11 +1,11 @@
-SRCS			=  main.cpp Sed.cpp
+SRCS			= main.cpp Karen.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++
 RM				= rm -f
 CFLAGS			=  -Wall -Wextra -Werror -std=c++98
 
-NAME			= custom_sed
+NAME			= karen
 
 all:			$(NAME)
 

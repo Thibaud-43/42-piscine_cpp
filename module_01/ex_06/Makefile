@@ -1,11 +1,11 @@
-SRCS			= Zombie.cpp ZombieEvent.cpp main.cpp
+SRCS			= main.cpp Karen.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++
 RM				= rm -f
 CFLAGS			=  -Wall -Wextra -Werror -std=c++98
 
-NAME			= zombieland
+NAME			= karen
 
 all:			$(NAME)
 

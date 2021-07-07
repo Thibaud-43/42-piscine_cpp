@@ -12,12 +12,25 @@ protected:
 	int			m_energyPoints;
 	int			m_attackDammage;
 public:
+	ClapTrap(void);
 	ClapTrap(std::string name);
-	~ClapTrap();
+	ClapTrap(ClapTrap const & src);
+	virtual ~ClapTrap();
 
-	void attack(std::string const & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+	ClapTrap	&	operator=(ClapTrap const & rhs);
+
+	void 		attack(std::string const & target);
+	void 		takeDamage(unsigned int amount);
+	void		beRepaired(unsigned int amount);
+
+	std::string	getName(void) const;
+	void		setName(const std::string name);
+	int			getHitPoints(void) const;
+	void		setHitPoints(const int hitPoints);
+	int			getEnergyPoints(void) const;
+	void		setEnergyPoints(const int energyPoints);
+	int			getAttackDammage(void) const;
+	void		setAttackDammage(const int attackDammage);
 };
 
 

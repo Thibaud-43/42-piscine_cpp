@@ -1,4 +1,4 @@
-SRCS			= main.cpp Sorcerer.cpp Victim.cpp Peon.cpp
+SRCS			= main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++

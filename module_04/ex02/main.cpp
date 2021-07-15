@@ -1,36 +1,26 @@
-#include "Squad.hpp"
-#include "TacticalMarine.hpp"
-#include "AssaultTerminator.hpp"
+#include "Dog.hpp"
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-int main(void)
+
+int main()
 {
-	ISpaceMarine* bob = new TacticalMarine;
-	ISpaceMarine* jim = new AssaultTerminator;
-	ISpaceMarine* tibo = new AssaultTerminator;
-	ISpaceMarine* tibo2 = new TacticalMarine;
-	ISquad* vlc = new Squad;
-	ISquad* vlc2 = new Squad;
-	vlc->push(bob);
-	vlc->push(jim);
-	vlc2->push(tibo2);
-	vlc2->push(tibo);
-	for (int i = 0; i < vlc->getCount(); ++i)
-	{
-		ISpaceMarine* cur = vlc->getUnit(i);
-		cur->battleCry();
-		cur->rangedAttack();
-		cur->meleeAttack();
-	}
-	std::cout << "secound squad" << std::endl;
-	for (int i = 0; i < vlc2->getCount(); ++i)
-	{
-		ISpaceMarine* cur = vlc2->getUnit(i);
-		cur->battleCry();
-		cur->rangedAttack();
-		cur->meleeAttack();
-	}
-	delete vlc;
-	delete vlc2;
-	return 0;
+	const Animal* animals[10];
+	for (int i = 0; i < 5; i++)
+		animals[i] =  new Dog();
+	for (int i = 5; i < 10; i++)
+		animals[i] =  new Cat();
+	for (int i = 0; i < 10; i++)
+		delete animals[i];
+
+	std::cout << "DEEP COPY :" << std:: endl;
+	Dog	a;
+	Dog b;
+
+	b = a;
+	std::cout << "ADDRESS OF A BRAIN :" << (a.getBrain()) << std:: endl;
+	std::cout << "ADDRESS OF B BRAIN :" << (b.getBrain()) << std:: endl;
 
 }

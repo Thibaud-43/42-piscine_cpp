@@ -1,4 +1,4 @@
-SRCS			= main.cpp Squad.cpp TacticalMarine.cpp AssaultTerminator.cpp
+SRCS			= main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CC				= clang++

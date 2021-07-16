@@ -62,7 +62,12 @@
 		"typeinfo": "cpp",
 		"unordered_map": "cpp",
 		"utility": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"*.tcc": "cpp",
+		"clocale": "cpp",
+		"deque": "cpp",
+		"memory_resource": "cpp",
+		"fstream": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

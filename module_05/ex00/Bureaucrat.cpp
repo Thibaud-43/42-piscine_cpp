@@ -34,7 +34,7 @@ Bureaucrat	&	Bureaucrat::operator=(Bureaucrat const & rhs)
 {
 	if (&rhs == this)
 		return *this;
-	m_name - rhs.m_name;
+	m_name = rhs.m_name;
 	m_grade = rhs.m_grade;
 	return *this;
 }

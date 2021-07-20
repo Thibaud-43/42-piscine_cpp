@@ -19,9 +19,9 @@ Form::Form(std::string name, bool isSigned, unsigned int gradeToSign, unsigned i
 m_name(name), m_gradeToExecute(gradeToExecute), m_gradeToSign(gradeToSign), m_signed(isSigned)
 {
 	if (gradeToSign > 150 || gradeToExecute > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 	else if (gradeToSign < 1 || gradeToExecute < 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw GradeTooHighException();
 	else
 		return ;
 }
